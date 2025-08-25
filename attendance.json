@@ -1,20 +1,15 @@
-[
-  {
-    "studentId": "SAH25200",
-    "studentName": "Shyam Kumar",
-    "parentEmail": "Shyam123456006@gmail.com",
-    "class": "8",
-    "date": "2025-08-24",
-    "time": "4:19:16 pm",
-    "status": "Present"
-  },
-  {
-    "studentId": "SAH25201",
-    "studentName": "Aarav Kumar",
-    "parentEmail": "Shyamroaster@gmail.com",
-    "class": "8",
-    "date": "2025-08-24",
-    "time": "4:25:18 pm",
-    "status": "Present"
+{
+  "name": "qr-attendance-server",
+  "version": "1.0.0",
+  "main": "Server.js",
+  "type": "commonjs",
+  "scripts": { "start": "node Server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.13",
+    "pdfkit": "^0.15.0"
   }
-]
+}
