@@ -1,5 +1,5 @@
 {
-  "name": "saamarthya-attendance-mailer",
+  "name": "server",
   "version": "1.0.0",
   "main": "Server.js",
   "type": "commonjs",
@@ -7,10 +7,8 @@
     "start": "node Server.js",
     "dev": "nodemon Server.js"
   },
-  "engines": {
-    "node": ">=18"
-  },
   "dependencies": {
+    "-": "^0.0.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
@@ -21,4 +19,3 @@
     "nodemon": "^3.0.2"
   }
 }
-

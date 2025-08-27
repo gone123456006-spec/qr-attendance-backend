@@ -187,7 +187,15 @@ app.post("/api/send-pdf-email", async (req, res) => {
 });
 
 /* ========== Start ========== */
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`   DRY_RUN=${DRY_RUN ? "true" : "false"}`);
-});
+/* ========== Start ========== */
+if (!process.env.VERCEL) {
+  // Local/Render/Railway: start a real server
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running on port ${PORT}`);
+    console.log(`   DRY_RUN=${DRY_RUN ? "true" : "false"}`);
+  });
+}
+
+// Export for Vercel's serverless function runtime
+module.exports = app;
+
