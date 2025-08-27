@@ -195,6 +195,18 @@ if (!process.env.VERCEL) {
     console.log(`   DRY_RUN=${DRY_RUN ? "true" : "false"}`);
   });
 }
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running on port ${PORT}`);
+    console.log(`   DRY_RUN=${DRY_RUN ? "true" : "false"}`);
+  });
+}
+module.exports = app;
+
+app.get("/", (_req, res) => {
+  res.json({ ok: true, message: "Saamarthya Mailer API. Try /api/health" });
+});
+
 
 // Export for Vercel's serverless function runtime
 module.exports = app;
