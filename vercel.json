@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "functions": {
+    "api/index.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/index.js"
+    }
+  ],
+  "env": {
+    "SMTP_USER": "gone123456006@gmail.com",
+    "SMTP_PASS": "oedf hfkd svys qaai",
+    "CORS_ORIGIN": "@cors_origin",
+    "DRY_RUN": "@dry_run"
+  }
+}
+
